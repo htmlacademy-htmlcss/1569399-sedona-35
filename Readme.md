@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Алексеев](https://up.htmlacademy.ru/htmlcss/35/user/1569399).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
