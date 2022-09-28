@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <nav class="navigation">
+          <img src="#" alt="Логотип сайта города «Седона»">
+
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="index.html">Главная</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link" href="about.html">О Седоне</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-active">Гостиницы</a>
+            </li>
+          </ul>
+
+          <ul class="navigation-list navigation-users">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                <span class="visually-hidden">Корзина</span>
+                <b class="navigation-cart">12</b>
+              </a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="button navigation-link" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-inner">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <img class="breadcrumbs-img" src="#" alt="Главная">
+              </a>
+            </li>
+
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link breadcrumbs-link-active">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
+        </header>
+
+        <section class="catalog-filters">
+          <h2 class="visually-hidden">Фильтр гостиниц</h2>
+
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-input" type="checkbox" name="swimming-pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-input" type="checkbox" name="parking" checked>
+                    Парковка
+                  </label>
+                </li>
+
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-input" type="checkbox" name="wi-fi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Тип жилья::</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-radio" type="radio" name="product-group" value="hotel" checked>
+                    Гостиница
+                  </label>
+                </li>
+
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-radio" type="radio" name="product-group" value="motel">
+                    Мотель
+                  </label>
+                </li>
+
+                <li class="catalog-filter-item">
+                  <label class="catalog-control">
+                    <input class="catalog-control-radio" type="radio" name="product-group" value="apartments">
+                    Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+              <div class="catalog-filter-price-control">
+                <div class="catalog-filter-price-min">
+                  <label for="catalog-filter-price-min-number">от</label> <input class="catalog-filter-price-min-number"
+                    id="catalog-filter-price-min-number" type="text" name="min-price" value="0">
+                </div>
+
+                <div class="catalog-filter-price-max">
+                  <label for="catalog-filter-price-max-number">от</label> <input class="catalog-filter-price-max-number"
+                    id="catalog-filter-price-max-number" type="text" name="max-price" value="9000">
+                </div>
+              </div>
+
+              <div class="catalog-filter-range-control">
+                <!-- TBD - будет добавлено после 8-ого раздела -->
+              </div>
+            </fieldset>
+
+            <button class="button catalog-button catalog-button-send" type="submit">Применить</button>
+
+            <button class="button catalog-button catalog-button-reset" type="reset">Сбросить</button>
+          </form>
+        </section>
+
+        <section class="catalog">
+          <h2 class="visually-hidden">Список гостиниц</h2>
+
+          <div class="catalog-sort">
+            <p class="catalog-sort-result">Найдено гостиниц: <span class="catalog-sort-sum">38</span></p>
+
+            <select class="catalog-sort-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+
+            <ul class="catalog-sort-list">
+              <li class="catalog-sort-item">
+                <a class="button catalog-sort-button catalog-sort-button-active" href="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+              </li>
+
+              <li class="catalog-sort-item">
+                <a class="button catalog-sort-button" href="#">
+                  <span class="visually-hidden">Показать на всю ширину</span>
+                </a>
+              </li>
+
+              <li class="catalog-sort-item">
+                <a class="button catalog-sort-button" href="#">
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="catalog-product">
+            <ul class="catalog-product-list">
+              <li class="catalog-product-card">
+                <a class="catalog-product-link" href="product.html">
+                  <h3 class="catalog-product-title">Amara Resort & Spa</h3>
+                  <img class="catalog-product-img" src="#" alt="Каньон с видом на ночное звёздное небо">
+                </a>
+
+                <div class="catalog-product-description">
+                  <span class="catalog-product-type">Гостиница</span>
+                  <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
+                </div>
+
+                <div class="catalog-product-buttons">
+                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                  <button class="button catalog-product-button" type="button">В
+                    избранное</button>
+                </div>
+
+                <div class="catalog-product-raiting">
+                  <ul class="catalog-product-star-list">
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                  </ul>
+
+                  <p class="catalog-product-raiting-text">Рейтинг: <span
+                      class="catalog-producr-raiting-number">8,5</span></p>
+                </div>
+              </li>
+
+              <li class="catalog-product-card">
+                <a class="catalog-product-link" href="product.html">
+                  <h3 class="catalog-product-title">Villas at Poco Diablo</h3>
+                  <img class="catalog-product-img" src="#" alt="Скалы с большим количеством деревьев вокруг и радугой">
+                </a>
+
+                <div class="catalog-product-description">
+                  <span class="catalog-product-type">Гостиница</span>
+                  <p class="catalog-product-price">От <span class="catalog-product-price-number">5000</span> ₽</p>
+                </div>
+
+                <div class="catalog-product-buttons">
+                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                    избранное</button>
+                </div>
+
+                <div class="catalog-product-raiting">
+                  <ul class="catalog-product-star-list">
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                  </ul>
+
+                  <p class="catalog-product-raiting-text">Рейтинг: <span
+                      class="catalog-producr-raiting-number">9,2</span></p>
+                </div>
+              </li>
+
+              <li class="catalog-product-card">
+                <a class="catalog-product-link" href="product.html">
+                  <h3 class="catalog-product-title">Desert Quail Inn</h3>
+                  <img class="catalog-product-img" src="#" alt="Красные скалы с большим количеством зелени вокруг">
+                </a>
+
+                <div class="catalog-product-description">
+                  <span class="catalog-product-type">Гостиница</span>
+                  <p class="catalog-product-price">От <span class="catalog-product-price-number">2500</span> ₽</p>
+                </div>
+
+                <div class="catalog-product-buttons">
+                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                    избранное</button>
+                </div>
+
+                <div class="catalog-product-raiting">
+                  <ul class="catalog-product-star-list">
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                  </ul>
+
+                  <p class="catalog-product-raiting-text">Рейтинг: <span
+                      class="catalog-producr-raiting-number">6,9</span></p>
+                </div>
+              </li>
+
+              <li class="catalog-product-card">
+                <a class="catalog-product-link" href="product.html">
+                  <h3 class="catalog-product-title">GreenTree Inn</h3>
+                  <img class="catalog-product-img" src="#" alt="Красные скалы с видом на звёздное небо">
+                </a>
+
+                <div class="catalog-product-description">
+                  <span class="catalog-product-type">Гостиница</span>
+                  <p class="catalog-product-price">От <span class="catalog-product-price-number">1500</span> ₽</p>
+                </div>
+
+                <div class="catalog-product-buttons">
+                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                    избранное</button>
+                </div>
+
+                <div class="catalog-product-raiting">
+                  <ul class="catalog-product-star-list">
+                    <li class="catalog-product-star-item"></li>
+                    <li class="catalog-product-star-item"></li>
+                  </ul>
+
+                  <p class="catalog-product-raiting-text">Рейтинг: <span
+                      class="catalog-producr-raiting-number">5,0</span></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="catalog-pagination">
+            <ul class="catalog-pagination-list">
+              <li class="catalog-pagination-item">
+                <a class="button catalog-pagination-link catalog-pagination-link-active" href="#">1</a>
+              </li>
+
+              <li class="catalog-pagination-item">
+                <a class="button catalog-pagination-link catalog-pagination-link" href="#">2</a>
+              </li>
+
+              <li class="catalog-pagination-item">
+                <a class="button catalog-pagination-link catalog-pagination-link" href="#">3</a>
+              </li>
+
+              <li class="catalog-pagination-item">
+                <a class="button catalog-pagination-link catalog-pagination-link" href="#">4</a>
+              </li>
+
+              <li class="catalog-pagination-item">
+                <span class="catalog-pagination-more">...</span>
+              </li>
+
+              <li class="catalog-pagination-item">
+                <a class="button catalog-pagination-link catalog-pagination-link catalog-pagination-link-last"
+                  href="#">10</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+
+        <section class="subscribe subscribe-inner">
+          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+
+          <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Email</label>
+            <input class="subscribe-email" placeholder="Ваш e-mail" type="email" name="subscribe-email"
+              id="subscribe-email" required>
+
+            <button class="button subscribe-button" type="submit">Подписаться</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">В Контакте</span>
+              </a>
+            </li>
+
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://t.me/htmlacademy ">
+                <span class="visually-hidden">Telegram</span>
+              </a>
+            </li>
+
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <address class="footer-contacts-adress">
+            <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </address>
+        </section>
+
+        <section class="footer-copyright">
+          <h2 class="visually-hidden">Копирайт</h2>
+          <a class="footer-copyright-link" href="https://htmlacademy.ru/">
+            <img class="footer-copyright-logo" src="#" alt="Логотип «HTML Academy»">
+          </a>
+        </section>
+      </footer>
+    </div>
+  </body>
+
+</html>
