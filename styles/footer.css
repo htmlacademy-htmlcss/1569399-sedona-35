@@ -1,0 +1,17 @@
+.page-footer {
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.page-footer a {
+  text-decoration: none;
+}
+
+.footer-contacts-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
