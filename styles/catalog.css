@@ -1,4 +1,6 @@
 .filter-wrapper {
+  padding: 0 70px;
+
   color: #ffffff;
 
   background-color: #82B3D3;
@@ -13,6 +15,12 @@
   line-height: 78px;
 }
 
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .breadcrumbs-link {
   font-style: normal;
   font-weight: 400;
@@ -23,8 +31,48 @@
   text-decoration: none;
 }
 
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .catalog-filter-group {
+  margin: 0;
+  padding: 0;
   border: none;
+}
+.catalog-filter-control-columns {
+  width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-filter-control-column:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+.catalog-filter-price-columns {
+  width: 550px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-price-column {
+  width: 290px;
+}
+
+.catalog-filter-buttons {
+  width: 190px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-control {
@@ -80,6 +128,14 @@
   background-color: #ffffff;
 }
 
+.catalog-pagination-list {
+  list-style: none;
+}
+
+.catalog {
+  padding: 0 70px;
+}
+
 .catalog-sort-control {
   font-size: 18px;
   line-height: 21px;
@@ -95,6 +151,16 @@
 
 .catalog-sort-button-active {
   border-color: #000000;
+}
+
+.catalog-product {
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.catalog-product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-product-card {
