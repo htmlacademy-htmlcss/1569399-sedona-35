@@ -1,0 +1,50 @@
+.page-footer {
+  padding: 0 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.footer-social {
+  width: 260px;
+  margin-right: 40px;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social-link {
+  color: #83B3D3;
+  text-decoration: none;
+}
+
+.footer-contacts {
+  width: 440px;
+  padding: 0 20px;
+}
+
+.footer-contacts-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-copyright {
+  width: 260px;
+  margin-left: 40px;
+}
+
+.footer-copyright-link {
+  color: #000000;
+  text-decoration: none;
+}
