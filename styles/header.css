@@ -1,10 +1,44 @@
 .page-header {
+  display: flex;
+  padding: 0 70px;
+
   color: #000000;
 
   background-color: #ffffff;
 }
 
+.page-header-link {
+  width: 140px;
+  margin-right: 28px;
+}
+
+.page-header-logo {
+  display: block;
+}
+
+.navigation {
+  flex-grow: 1;
+  display: flex;
+}
+
+.navigation-list {
+  width: 465px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.navigation-users {
+  max-width: 312px;
+  margin-left: auto;
+}
+
 .navigation-link {
+  display: block;
+  padding: 0 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
