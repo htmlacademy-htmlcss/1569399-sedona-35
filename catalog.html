@@ -25,7 +25,7 @@
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-active" href="index.html">Главная</a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
 
             <li class="navigation-item">
@@ -33,7 +33,7 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link navigation-link-active">Гостиницы</a>
             </li>
           </ul>
 
@@ -62,8 +62,8 @@
               </a>
             </li>
 
-            <li class="navigation-item">
-              <a class="button navigation-link" href="#">Хочу сюда!</a>
+            <li class="navigation-item navigation-item-button">
+              <a class="button navigation-link navigation-button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -79,8 +79,8 @@
                 <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                   <svg class="breadcrumbs-link-icon" width="21" height="20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="m10.4 3-6 5.8V15h12V8.8l-6-5.8Zm5 11h-10V9.2l5-4.8 5 4.8V14Z" fill="#000" />
-                    <path d="M8.4 13h1v-2.5h2V13h1V9.5h-4V13Z" fill="#000" />
+                    <path d="m10.4 3-6 5.8V15h12V8.8l-6-5.8Zm5 11h-10V9.2l5-4.8 5 4.8V14Z" fill="#ffffff" />
+                    <path d="M8.4 13h1v-2.5h2V13h1V9.5h-4V13Z" fill="#ffffff" />
                   </svg>
                   <span class="visually-hidden">Главная</span>
                 </a>
@@ -198,20 +198,20 @@
 
             <ul class="catalog-sort-list">
               <li class="catalog-sort-item">
-                <a class="catalog-sort-button catalog-sort-button-active" href="#">
+                <a class="catalog-sort-button catalog-sort-button-tile catalog-sort-button-active" href="#">
                   <span class="visually-hidden">Показать карточки</span>
 
                 </a>
               </li>
 
               <li class="catalog-sort-item">
-                <a class="catalog-sort-button" href="#">
+                <a class="catalog-sort-button catalog-sort-button-slideshow" href="#">
                   <span class="visually-hidden">Показать на всю ширину</span>
                 </a>
               </li>
 
               <li class="catalog-sort-item">
-                <a class="catalog-sort-button" href="#">
+                <a class="catalog-sort-button catalog-sort-button-list" href="#">
                   <span class="visually-hidden">Показать список</span>
                 </a>
               </li>
@@ -219,70 +219,71 @@
           </div>
 
           <div class="catalog-product">
-            <ul class="catalog-product-list">
+            <ul
+              class="catalog-product-list catalog-product-list-tile catalog-product-list-slideshow catalog-product-list-list">
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
-                  <h3 class="catalog-product-title">Amara Resort & Spa</h3>
+                  <h3 class="catalog-product-title">Amara Resort &&nbsp;Spa</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_01.jpg" width="300" height="212"
                     alt="Каньон с видом на ночное звёздное небо">
                 </a>
 
-                <div class="catalog-product-description">
-                  <span class="catalog-product-type">Гостиница</span>
-                  <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
-                </div>
+                <!-- <div class="catalog-product-description"> -->
+                <span class="catalog-product-type">Гостиница</span>
+                <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
+                <!-- </div> -->
 
-                <div class="catalog-product-buttons">
-                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
-                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
-                    избранное</button>
-                </div>
+                <!-- <div class="catalog-product-buttons"> -->
+                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                  избранное</button>
+                <!-- </div> -->
 
-                <div class="catalog-product-raiting">
-                  <h4 class="visually-hidden">Звёзд:</h4>
-                  <ul class="catalog-product-star-list">
-                    <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
-                  </ul>
+                <!-- <div class="catalog-product-raiting"> -->
+                <h4 class="visually-hidden">Звёзд:</h4>
+                <ul class="catalog-product-star-list">
+                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
+                </ul>
 
-                  <p class="catalog-product-raiting-text">Рейтинг: <span
-                      class="catalog-producr-raiting-number">8,5</span></p>
-                </div>
+                <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">8,5</span>
+                </p>
+                <!-- </div> -->
               </li>
 
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
-                  <h3 class="catalog-product-title">Villas at Poco Diablo</h3>
+                  <h3 class="catalog-product-title">Villas at&nbsp;Poco&nbsp;Diablo</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_02.jpg" width="300" height="212"
                     alt="Скалы с большим количеством деревьев вокруг и радугой">
                 </a>
 
-                <div class="catalog-product-description">
-                  <span class="catalog-product-type">Гостиница</span>
-                  <p class="catalog-product-price">От <span class="catalog-product-price-number">5000</span> ₽</p>
-                </div>
+                <!-- <div class="catalog-product-description"> -->
+                <span class="catalog-product-type">Гостиница</span>
+                <p class="catalog-product-price">От <span class="catalog-product-price-number">5000</span> ₽</p>
+                <!-- </div> -->
 
-                <div class="catalog-product-buttons">
-                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
-                  <button class="button catalog-product-button catalog-product-button-add catalog-product-button-active"
-                    type="button">В
-                    избранном</button>
-                </div>
+                <!-- <div class="catalog-product-buttons"> -->
+                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <button class="button catalog-product-button catalog-product-button-add catalog-product-button-active"
+                  type="button">В
+                  избранном</button>
+                <!-- </div> -->
 
-                <div class="catalog-product-raiting">
-                  <h4 class="visually-hidden">Звёзд:</h4>
-                  <ul class="catalog-product-star-list">
-                    <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
-                  </ul>
+                <!-- <div class="catalog-product-raiting"> -->
+                <h4 class="visually-hidden">Звёзд:</h4>
+                <ul class="catalog-product-star-list">
+                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
+                </ul>
 
-                  <p class="catalog-product-raiting-text">Рейтинг: <span
-                      class="catalog-producr-raiting-number">9,2</span></p>
-                </div>
+                <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">9,2</span>
+                </p>
+                <!-- </div> -->
               </li>
 
               <li class="catalog-product-card">
@@ -292,28 +293,28 @@
                     alt="Красные скалы с большим количеством зелени вокруг">
                 </a>
 
-                <div class="catalog-product-description">
-                  <span class="catalog-product-type">Гостиница</span>
-                  <p class="catalog-product-price">От <span class="catalog-product-price-number">2500</span> ₽</p>
-                </div>
+                <!-- <div class="catalog-product-description"> -->
+                <span class="catalog-product-type">Гостиница</span>
+                <p class="catalog-product-price">От <span class="catalog-product-price-number">2500</span> ₽</p>
+                <!-- </div> -->
 
-                <div class="catalog-product-buttons">
-                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
-                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
-                    избранное</button>
-                </div>
+                <!-- <div class="catalog-product-buttons"> -->
+                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                  избранное</button>
+                <!-- </div> -->
 
-                <div class="catalog-product-raiting">
-                  <h4 class="visually-hidden">Звёзд:</h4>
-                  <ul class="catalog-product-star-list">
-                    <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                  </ul>
+                <!-- <div class="catalog-product-raiting"> -->
+                <h4 class="visually-hidden">Звёзд:</h4>
+                <ul class="catalog-product-star-list">
+                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
+                </ul>
 
-                  <p class="catalog-product-raiting-text">Рейтинг: <span
-                      class="catalog-producr-raiting-number">6,9</span></p>
-                </div>
+                <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">6,9</span>
+                </p>
+                <!-- </div> -->
               </li>
 
               <li class="catalog-product-card">
@@ -323,27 +324,27 @@
                     alt="Красные скалы с видом на звёздное небо">
                 </a>
 
-                <div class="catalog-product-description">
-                  <span class="catalog-product-type">Гостиница</span>
-                  <p class="catalog-product-price">От <span class="catalog-product-price-number">1500</span> ₽</p>
-                </div>
+                <!-- <div class="catalog-product-description"> -->
+                <span class="catalog-product-type">Гостиница</span>
+                <p class="catalog-product-price">От <span class="catalog-product-price-number">1500</span> ₽</p>
+                <!-- </div> -->
 
-                <div class="catalog-product-buttons">
-                  <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
-                  <button class="button catalog-product-button catalog-product-button-add" type="button">В
-                    избранное</button>
-                </div>
+                <!-- <div class="catalog-product-buttons"> -->
+                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <button class="button catalog-product-button catalog-product-button-add" type="button">В
+                  избранное</button>
+                <!-- </div> -->
 
-                <div class="catalog-product-raiting">
-                  <h4 class="visually-hidden">Звёзд:</h4>
-                  <ul class="catalog-product-star-list">
-                    <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                    <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                  </ul>
+                <!-- <div class="catalog-product-raiting"> -->
+                <h4 class="visually-hidden">Звёзд:</h4>
+                <ul class="catalog-product-star-list">
+                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
+                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
+                </ul>
 
-                  <p class="catalog-product-raiting-text">Рейтинг: <span
-                      class="catalog-producr-raiting-number">5,0</span></p>
-                </div>
+                <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">5,0</span>
+                </p>
+                <!-- </div> -->
               </li>
             </ul>
           </div>
@@ -378,9 +379,11 @@
         </section>
 
         <section class="subscribe subscribe-inner">
-          <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
+          <div class="subscribe-wrapper">
+            <h2 class="title subscribe-title">Подпишитесь на&nbsp;рассылку</h2>
 
-          <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="subscribe-text">Только полезная информация и&nbsp;никакого спама, <br>честное бойскаутское!</p>
+          </div>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Email</label>
@@ -451,7 +454,6 @@
                   <path fill="#fff" transform="translate(0 .36)" d="M0 0h115v33H0z" />
                 </clipPath>
               </defs>
-            </svg>
             </svg>
           </a>
         </section>
