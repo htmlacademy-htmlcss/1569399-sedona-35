@@ -1,8 +1,9 @@
 .page-footer {
-  padding: 0 70px;
+  padding: 40px 70px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 
   text-align: center;
 
@@ -10,24 +11,34 @@
 }
 
 .footer-social {
-  width: 260px;
+  width: 142px;
   margin-right: 40px;
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .footer-social-link {
-  color: #83B3D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 47px;
+  height: 40px;
+
+  color: #83b3d3;
   text-decoration: none;
 }
 
 .footer-contacts {
-  width: 440px;
-  padding: 0 20px;
+  min-width: 440px;
+  max-width: 600px;
+  padding: 5px 20px;
 }
 
 .footer-contacts-phone {
@@ -40,7 +51,7 @@
 }
 
 .footer-copyright {
-  width: 260px;
+  width: 142px;
   margin-left: 40px;
 }
 
