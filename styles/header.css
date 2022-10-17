@@ -25,11 +25,12 @@
 }
 
 .navigation-list {
-  max-width: 550px;
   margin: 0;
+  margin-right: 20px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   align-items: center;
 
   list-style: none;
@@ -51,8 +52,10 @@
 }
 
 .navigation-users {
-  max-width: 312px;
+  margin-right: 0;
+  max-width: 320px;
   margin-left: auto;
+  flex-grow: 0;
 }
 
 .navigation-users .navigation-link {
