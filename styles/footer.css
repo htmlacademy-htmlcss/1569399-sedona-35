@@ -37,7 +37,8 @@
 
 .footer-contacts {
   min-width: 440px;
-  max-width: 600px;
+  /* max-width: 670px; */
+  flex-grow: 1;
   padding: 5px 20px;
 }
 
