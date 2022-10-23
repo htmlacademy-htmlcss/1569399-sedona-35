@@ -1,6 +1,6 @@
 /* Main */
 .main-index {
-  background-color: #ffffff;
+  background-color: var(--extra-light);
 }
 
 /* Hero */
@@ -9,9 +9,9 @@
   padding: 50px 70px;
 
   text-align: center;
-  color: #ffffff;
+  color: var(--extra-light);
 
-  background-color: #82b3d3;
+  background-color: var(--main-accent);
   background-image: url("../images/background/background_01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@
 .advantages {
   text-align: center;
 
-  background-color: #ffffff;
+  background-color: var(--extra-light);
 }
 
 .advantages-wrapper {
@@ -75,7 +75,7 @@
 
   width: 400px;
   min-height: 384px;
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: var(--main-accent-light);
 }
 
 .advantages-item:nth-child(odd) {
@@ -91,7 +91,7 @@
 .advantages-item.advantages-item-accent {
   width: 100%;
   display: flex;
-  background-color: #82b3d3;
+  background-color: var(--main-accent);
 }
 
 .advantages-item-accent .advantages-wrapper-item {
@@ -105,7 +105,7 @@
 
 .advantages-item-accent .advantages-description,
 .advantages-item-accent .advantages-item-title {
-  color: #ffffff;
+  color: var(--extra-light);
 }
 
 .advantages-item-title {
@@ -120,7 +120,7 @@
   line-height: 28px;
   text-transform: uppercase;
 
-  color: #000000;
+  color: var(--extra-dark);
 }
 
 .advantages-item-title::before {
@@ -132,7 +132,7 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background-color: #ffffff;
+  background-color: var(--extra-light);
   opacity: 0.3;
 }
 
@@ -145,12 +145,12 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background-color: #000000;
+  background-color: var(--extra-dark);
   opacity: 0.3;
 }
 
 .advantages-item-accent .advantages-item-title::before {
-  background-color: #ffffff;
+  background-color: var(--extra-light);
 }
 
 .advantages-description {
@@ -205,7 +205,7 @@
 }
 
 .advantages-item-additional:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: var(--extra-light);
 }
 
 /* Search */
@@ -216,7 +216,7 @@
 
   text-align: center;
 
-  background-color: #ffffff;
+  background-color: var(--extra-light);
 }
 
 .search-title {
@@ -242,10 +242,10 @@
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
-  color: #ffffff;
+  color: var(--extra-light);
   align-self: center;
 
-  background-color: #756157;
+  background-color: var(--second-accent);
 
   margin-top: 35px;
   margin-bottom: 25px;
@@ -255,14 +255,26 @@
   margin-top: 0;
 }
 
+.search-button:hover,
+.search-button:focus {
+  background-color: var(--second-accent-dark);
+  outline: none;
+
+  transition: all ease-in-out 0.3s;
+}
+
+.search-button:active {
+  color: var(--medium-light);
+}
+
 /* Subscribe */
 .subscribe {
   padding: 95px 70px 80px;
 
-  color: #ffffff;
+  color: var(--extra-light);
   text-align: center;
 
-  background-color: #82b3d3;
+  background-color: var(--main-accent);
   background-image: url("../images/background/background_02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -272,7 +284,7 @@
   margin: 0;
   margin-bottom: 20px;
 
-  color: #ffffff;
+  color: var(--extra-light);
 }
 
 .subscribe-text {
@@ -300,10 +312,21 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #000000;
+  color: var(--extra-dark);
 
-  background-color: #f2f2f2;
+  background-color: var(--basic-light);
   border-radius: 4px 0 0 4px;
+}
+
+.subscribe-email:hover,
+.subscribe-email:focus {
+  background-color: var(--second-light);
+}
+
+.subscribe-email:focus {
+  background-color: var(--second-light);
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .subscribe-button {
@@ -311,8 +334,24 @@
   border: none;
   font-size: 20px;
   line-height: 36px;
-  color: #ffffff;
+  color: var(--extra-light);
 
-  background-color: #82b3d3;
+  background-color: var(--main-accent);
   border-radius: 0 4px 4px 0;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--medium-accent);
+  outline: none;
+
+  transition: all ease-in-out 0.3s;
+}
+
+.subscribe-button:active {
+  color: var(--medium-light);
+}
+
+.subscribe-button:disabled {
+  background-color: var(--second-light);
 }
