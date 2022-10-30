@@ -1,0 +1,182 @@
+.page-header {
+  display: flex;
+  padding: 0 70px;
+
+  color: var(--extra-dark);
+
+  background-color: var(--extra-light);
+}
+
+.page-header-link {
+  width: 140px;
+  margin-right: 28px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  outline: none;
+
+  transform-origin: 50% 0;
+
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.page-header-link:hover,
+.page-header-link:focus {
+  transform: scale(1.1);
+}
+
+.page-header-link:active {
+  transform: scale(1);
+}
+
+.page-header-link-active:hover,
+.page-header-link-active:focus,
+.page-header-link-active:active {
+  transform: scale(1);
+}
+
+.page-header-logo {
+  display: block;
+  position: absolute;
+  z-index: 5;
+}
+
+.navigation {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.navigation-list {
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+
+  list-style: none;
+}
+
+.navigation-link {
+  position: relative;
+  height: 100%;
+  display: block;
+  padding: 20px 16px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  color: var(--extra-dark);
+  outline: none;
+
+  transform-origin: 50% 50%;
+
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: var(--main-accent);
+}
+
+.navigation-link:active {
+  color: var(--medium-accent);
+}
+
+.navigation-link path {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.navigation-link:hover path,
+.navigation-link:focus path {
+  fill: var(--main-accent);
+}
+
+.navigation-users {
+  margin-right: 0;
+  min-width: 270px;
+  max-width: 320px;
+  margin-left: auto;
+  justify-content: flex-end;
+  flex-grow: 0;
+}
+
+.navigation-users .navigation-link {
+  padding: 20px 12px;
+}
+
+.navigation-link-active:hover {
+  color: var(--extra-dark);
+}
+
+.navigation-link.navigation-button {
+  min-width: 160px;
+  padding: 8px 15px;
+}
+
+.navigation-link.navigation-button:hover,
+.navigation-link.navigation-button:focus {
+  background-color: var(--second-accent-dark);
+}
+
+.navigation-link.navigation-button:active {
+  color: var(--extra-light-08);
+}
+
+.navigation-link-active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 16px;
+  right: 16px;
+  z-index: 5;
+  height: 4px;
+  background-color: var(--second-accent);
+}
+
+.navigation-cart {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+
+  display: block;
+  padding: 2px;
+  min-width: 20px;
+  height: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--extra-light);
+
+  background-color: var(--basic-accent);
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.navigation-item-button {
+  margin-left: 20px;
+}
+
+.navigation-item .button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--extra-light);
+
+  background-color: var(--second-accent);
+}
