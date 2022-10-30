@@ -8,7 +8,7 @@
   height: 100%;
   display: flex;
   color: var(--extra-dark);
-  background-color: var(--modal-light);
+  background-color: var(--extra-light-08);
 }
 
 .modal-container-close {
@@ -20,8 +20,8 @@
   margin: auto;
   padding: 64px 70px;
   width: 717px;
-  background: #ffffff;
-  box-shadow: 0 25px 50px var(--light-dark);
+  background: var(--extra-light);
+  box-shadow: 0 25px 50px var(--extra-dark-015);
   border-radius: 30px;
 }
 
@@ -34,6 +34,7 @@
   height: 52px;
   border-radius: 50%;
   border: none;
+  outline: 3px solid transparent;
 
   display: flex;
   justify-content: center;
@@ -41,12 +42,20 @@
 
   background-color: var(--basic-light);
   cursor: pointer;
+
+  transition-property: background-color, outline;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.modal-close-img path {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .modal-close-button:hover {
   background-color: var(--modal-second-light);
-
-  transition: all ease-in-out 0.2s;
 }
 
 .modal-close-button:focus {
@@ -57,8 +66,9 @@
 .modal-close-button:active {
   outline: none;
 }
+
 .modal-close-button:active path {
-  fill: var(--medium-dark);
+  fill: var(--extra-dark-03);
 }
 
 .modal-title {
@@ -102,23 +112,30 @@
 
   border-radius: 4px;
   border: none;
+  outline: none;
 
   grid-row: 1 / 2;
   grid-column: 2 / -1;
 
   background-color: var(--basic-light);
+
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.modal-search-form-date::placeholder {
+  color: var(--extra-dark);
 }
 
 .modal-search-form-date:hover,
 .modal-search-form-date:focus {
   background-color: var(--second-light);
-  transition: background-color ease-in-out 0.2s;
 }
 
 .modal-search-form-date:focus {
   background-color: var(--second-light);
-  outline: 3px solid #83b3d3;
-  transition: background-color ease-in-out 0.2s;
+  outline: 3px solid var(--main-accent);
 }
 
 .modal-search-form-calendar {
@@ -131,15 +148,18 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
+
+  transition-property: background-color, color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .modal-search-img path {
-  fill: var(--second-accent-light);
+  fill: var(--second-accent-03);
 }
 
 .modal-search-form-calendar:hover {
   background-color: var(--modal-second-light);
-  transition: color ease-in-out 0.2s;
 }
 
 .modal-search-form-calendar:focus {
@@ -152,15 +172,19 @@
   outline: none;
 }
 
+.modal-search-img path {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
 .modal-search-form-calendar:hover .modal-search-img,
 .modal-search-form-calendar:focus .modal-search-img {
   opacity: 1;
-  transition: all ease-in-out 0.2s;
 }
 
 .modal-search-form-calendar:active path {
   fill: var(--main-accent);
-  transition: all ease-in-out 0.2s;
 }
 
 /* Ещё одна реализация стилей наведения  */
@@ -178,7 +202,7 @@
 }
 
 .modal-search-form-calendar:active path {
-  fill: var(--second-accent-light);
+  fill: var(--second-accent-03);
   outline: none;
 } */
 
@@ -231,7 +255,10 @@
 }
 
 .modal-search-form-number-img path {
-  fill: var(--second-accent-light);
+  fill: var(--second-accent-03);
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .modal-search-form-number-button:hover path {
@@ -248,7 +275,7 @@
 }
 
 .modal-search-form-number-button:active path {
-  fill: var(--second-accent-light);
+  fill: var(--second-accent-03);
 }
 
 .modal-search-form-number-button:active .modal-search-form-number-img {
@@ -272,26 +299,33 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: #000;
+  color: var(--extra-dark);
 
   grid-column: 1 / -1;
   grid-row: 1;
 
   border-radius: 4px;
   border: none;
+  outline: none;
   background-color: var(--basic-light);
+
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.modal-search-form-number::placeholder {
+  color: var(--extra-dark);
 }
 
 .modal-search-form-number:hover,
 .modal-search-form-number:focus {
   background-color: var(--second-light);
-  transition: background-color ease-in-out 0.2s;
 }
 
 .modal-search-form-number:focus {
   background-color: var(--second-light);
-  outline: 3px solid #83b3d3;
-  transition: background-color ease-in-out 0.2s;
+  outline: 3px solid var(--main-accent);
 }
 
 .modal-form-button {
@@ -303,18 +337,20 @@
 
   background-color: var(--main-accent);
   border-radius: 4px;
+
+  transition-property: background-color, outline;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .modal-form-button:hover,
 .modal-form-button:focus {
   background-color: var(--medium-accent);
   outline: none;
-
-  transition: all ease-in-out 0.3s;
 }
 
 .modal-form-button:active {
-  color: var(--medium-light);
+  color: var(--extra-light-08);
 }
 
 .modal-form-button:disabled {
@@ -378,7 +414,7 @@
 
   color: var(--extra-light);
   background-color: var(--basic-dark);
-  box-shadow: 0 15px 30px var(--medium-dark);
+  box-shadow: 0 15px 30px var(--extra-dark-03);
 }
 
 .tooltip-text::before {
