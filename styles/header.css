@@ -13,15 +13,18 @@
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+  outline: none;
 
-  transition: transform ease-in-out 0.3s;
   transform-origin: 50% 0;
+
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 }
 
 .page-header-link:hover,
 .page-header-link:focus {
   transform: scale(1.1);
-  outline: none;
 }
 
 .page-header-link:active {
@@ -71,26 +74,33 @@
   text-align: center;
   text-decoration: none;
   color: var(--extra-dark);
+  outline: none;
 
   transform-origin: 50% 50%;
+
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--main-accent);
-  outline: none;
-
-  transition: all ease-in-out 0.2s;
 }
 
 .navigation-link:active {
   color: var(--medium-accent);
 }
 
+.navigation-link path {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
 .navigation-link:hover path,
 .navigation-link:focus path {
   fill: var(--main-accent);
-  transition: all ease-in-out 0.2s;
 }
 
 .navigation-users {
@@ -118,12 +128,10 @@
 .navigation-link.navigation-button:hover,
 .navigation-link.navigation-button:focus {
   background-color: var(--second-accent-dark);
-
-  transition: color ease-in-out 0.2s;
 }
 
 .navigation-link.navigation-button:active {
-  color: var(--medium-light);
+  color: var(--extra-light-08);
 }
 
 .navigation-link-active::after {

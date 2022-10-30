@@ -6,12 +6,13 @@
 /* Hero */
 .hero {
   position: relative;
+  min-height: 485px;
   padding: 50px 70px;
 
   text-align: center;
   color: var(--extra-light);
 
-  background-color: var(--main-accent);
+  background-color: var(--medium-accent);
   background-image: url("../images/background/background_01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +76,7 @@
 
   width: 400px;
   min-height: 384px;
-  background-color: var(--main-accent-light);
+  background-color: var(--main-accent-02);
 }
 
 .advantages-item:nth-child(odd) {
@@ -239,6 +240,8 @@
 
 .search-button {
   max-width: 600px;
+  margin-top: 35px;
+  margin-bottom: 25px;
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
@@ -246,9 +249,11 @@
   align-self: center;
 
   background-color: var(--second-accent);
+  outline: none;
 
-  margin-top: 35px;
-  margin-bottom: 25px;
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .search-button:only-child {
@@ -258,13 +263,10 @@
 .search-button:hover,
 .search-button:focus {
   background-color: var(--second-accent-dark);
-  outline: none;
-
-  transition: all ease-in-out 0.3s;
 }
 
 .search-button:active {
-  color: var(--medium-light);
+  color: var(--extra-light-08);
 }
 
 /* Subscribe */
@@ -274,7 +276,7 @@
   color: var(--extra-light);
   text-align: center;
 
-  background-color: var(--main-accent);
+  background-color: var(--medium-accent);
   background-image: url("../images/background/background_02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -316,16 +318,20 @@
 
   background-color: var(--basic-light);
   border-radius: 4px 0 0 4px;
+  outline: none;
+
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
-.subscribe-email:hover,
-.subscribe-email:focus {
-  background-color: var(--second-light);
+.subscribe-email::placeholder {
+  color: var(--extra-dark);
 }
 
 .subscribe-email:focus {
   background-color: var(--second-light);
-  outline: 3px solid #83b3d3;
+  outline: 3px solid var(--main-accent);
   outline-offset: -3px;
 }
 
@@ -338,18 +344,20 @@
 
   background-color: var(--main-accent);
   border-radius: 0 4px 4px 0;
+  outline: none;
+
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .subscribe-button:hover,
 .subscribe-button:focus {
   background-color: var(--medium-accent);
-  outline: none;
-
-  transition: all ease-in-out 0.3s;
 }
 
 .subscribe-button:active {
-  color: var(--medium-light);
+  color: var(--extra-light-08);
 }
 
 .subscribe-button:disabled {

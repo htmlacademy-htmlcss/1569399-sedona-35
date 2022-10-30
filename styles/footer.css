@@ -32,8 +32,15 @@
   width: 47px;
   height: 40px;
 
-  color: #83b3d3;
+  color: var(--main-accent);
   text-decoration: none;
+  outline: none;
+}
+
+.footer-social-link path {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .footer-social-link:hover,
@@ -41,7 +48,6 @@
 .footer-social-link:hover path,
 .footer-social-link:focus path {
   fill: var(--medium-accent);
-  outline: none;
 }
 
 .footer-social-link:active {
@@ -62,14 +68,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--extra-dark);
+  outline: none;
+
+  transition-property: color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .footer-contacts-phone:hover,
 .footer-contacts-phone:focus {
   color: var(--second-accent);
-  outline: none;
-
-  transition: color ease-in-out 0.2s;
 }
 
 .footer-contacts-phone:active {
@@ -89,6 +97,17 @@
   margin-bottom: 20px;
   color: var(--extra-dark);
   text-decoration: none;
+  outline: none;
+
+  transition-property: color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.footer-copyright-link path {
+  transition-property: fill, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .footer-copyright-link:last-child {
@@ -100,7 +119,6 @@
 .footer-copyright-link:hover path,
 .footer-copyright-link:focus path {
   fill: var(--second-accent);
-  outline: none;
 }
 
 .footer-copyright-link:active {

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/catalog.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/modal.css">
   </head>
 
   <body>
@@ -21,7 +22,7 @@
       <header class="page-header">
         <a class="page-header-link" href="index.html">
           <img class="page-header-logo" src="images/logo/sedona.svg" width="140" height="70"
-            alt="Логотип сайта города «Седона» с изображнием гор">
+            alt="Логотип сайта города «Седона» с изображнием гор.">
         </a>
 
         <nav class="navigation">
@@ -42,7 +43,7 @@
           <ul class="navigation-list navigation-users">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
                 <svg class="navigation-search-img" aria-hidden="true" focusable="false" width="21" height="20"
                   viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -54,7 +55,7 @@
 
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Корзина</span>
+                <span class="visually-hidden">Корзина.</span>
                 <b class="navigation-cart">12</b>
                 <svg class="navigation-cart-img" aria-hidden="true" focusable="false" width="21" height="20"
                   viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,13 +86,7 @@
                     <path d="m10.4 3-6 5.8V15h12V8.8l-6-5.8Zm5 11h-10V9.2l5-4.8 5 4.8V14Z" fill="#ffffff" />
                     <path d="M8.4 13h1v-2.5h2V13h1V9.5h-4V13Z" fill="#ffffff" />
                   </svg>
-                  <span class="visually-hidden">Главная</span>
-                </a>
-              </li>
-
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link breadcrumbs-link-active">
-                  Гостиницы
+                  <span class="visually-hidden">Главная.</span>
                 </a>
               </li>
 
@@ -100,11 +95,17 @@
                   Временная ссылка для проверки стилей взаимодействия
                 </a>
               </li>
+
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link breadcrumbs-link-active">
+                  Гостиницы
+                </a>
+              </li>
             </ul>
           </header>
 
           <section class="catalog-filters">
-            <h2 class="visually-hidden">Фильтр гостиниц</h2>
+            <h2 class="visually-hidden">Фильтр гостиниц.</h2>
 
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
               <div class="catalog-filter-control-columns">
@@ -113,22 +114,26 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-input" type="checkbox" name="swimming-pool" checked>
-                        Бассейн
+                        <input class="catalog-control-input visually-hidden" type="checkbox" name="swimming-pool"
+                          checked>
+                        <span class="catalog-control-mark"></span>
+                        <span class="catalog-control-label">Бассейн</span>
                       </label>
                     </li>
 
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-input" type="checkbox" name="parking" checked>
-                        Парковка
+                        <input class="catalog-control-input visually-hidden" type="checkbox" name="parking" checked>
+                        <span class="catalog-control-mark"></span>
+                        <span class="catalog-control-label">Парковка</span>
                       </label>
                     </li>
 
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-input" type="checkbox" name="wi-fi">
-                        Wi-Fi
+                        <input class="catalog-control-input visually-hidden" type="checkbox" name="wi-fi">
+                        <span class="catalog-control-mark"></span>
+                        <span class="catalog-control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -139,22 +144,28 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-radio" type="radio" name="product-group" value="hotel" checked>
-                        Гостиница
+                        <input class="catalog-control-input visually-hidden" type="radio" name="product-group"
+                          value="hotel" checked>
+                        <span class="catalog-control-radio"></span>
+                        <span class="catalog-control-label">Гостиница</span>
                       </label>
                     </li>
 
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-radio" type="radio" name="product-group" value="motel">
-                        Мотель
+                        <input class="catalog-control-input visually-hidden" type="radio" name="product-group"
+                          value="motel">
+                        <span class="catalog-control-radio"></span>
+                        <span class="catalog-control-label">Мотель</span>
                       </label>
                     </li>
 
                     <li class="catalog-filter-item">
                       <label class="catalog-control">
-                        <input class="catalog-control-radio" type="radio" name="product-group" value="apartments">
-                        Апартаменты
+                        <input class="catalog-control-input visually-hidden" type="radio" name="product-group"
+                          value="apartments">
+                        <span class="catalog-control-radio"></span>
+                        <span class="catalog-control-label">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -168,18 +179,29 @@
                     <div class="catalog-filter-price-control catalog-filter-price-min">
                       <label class="catalog-filter-price-label" for="catalog-filter-price-min-number">от</label> <input
                         class="catalog-filter-price-input catalog-filter-price-min-number"
-                        id="catalog-filter-price-min-number" type="text" name="min-price" value="0">
+                        id="catalog-filter-price-min-number" type="number" name="min-price" placeholder="0">
                     </div>
 
                     <div class="catalog-filter-price-control catalog-filter-price-max">
-                      <label class="catalog-filter-price-label" for="catalog-filter-price-number">от</label> <input
+                      <label class="catalog-filter-price-label" for="catalog-filter-price-number">до</label> <input
                         class="catalog-filter-price-input catalog-filter-price-max-number"
-                        id="catalog-filter-price-number" type="text" name="max-price" value="9000">
+                        id="catalog-filter-price-number" type="number" name="max-price" placeholder="9000">
                     </div>
                   </div>
 
                   <div class="catalog-filter-range-control">
-                    <!-- TBD - будет добавлено после 8-ого раздела -->
+
+                    <div class="catalog-filter-range-scale">
+                      <div class="catalog-filter-range-bar" style="left: 0; width: 226px;">
+                        <button class="catalog-filter-range-toogle catalog-filter-range-toogle-min" type="button">
+                          <span class="visually-hidden">Указать минмальную стоимость</span>
+                        </button>
+
+                        <button class="catalog-filter-range-toogle catalog-filter-range-toogle-max" type="button">
+                          <span class="visually-hidden">Указать маскимальную стоимость</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </fieldset>
 
@@ -194,7 +216,7 @@
         </div>
 
         <section class="catalog">
-          <h2 class="visually-hidden">Список гостиниц</h2>
+          <h2 class="visually-hidden">Список гостиниц.</h2>
 
           <div class="catalog-sort">
             <p class="title catalog-sort-result">Найдено гостиниц: <span class="catalog-sort-sum">38</span></p>
@@ -208,173 +230,118 @@
             <ul class="catalog-sort-list">
               <li class="catalog-sort-item">
                 <a class="catalog-sort-button catalog-sort-button-tile catalog-sort-button-active" href="#">
-                  <span class="visually-hidden">Показать карточки</span>
-
+                  <span class="visually-hidden">Показать карточки.</span>
                 </a>
               </li>
 
               <li class="catalog-sort-item">
                 <a class="catalog-sort-button catalog-sort-button-slideshow" href="#">
-                  <span class="visually-hidden">Показать на всю ширину</span>
+                  <span class="visually-hidden">Показать на всю ширину.</span>
                 </a>
               </li>
 
               <li class="catalog-sort-item">
                 <a class="catalog-sort-button catalog-sort-button-list" href="#">
-                  <span class="visually-hidden">Показать список</span>
+                  <span class="visually-hidden">Показать список.</span>
                 </a>
               </li>
             </ul>
           </div>
 
           <div class="catalog-product">
-            <ul
-              class="catalog-product-list catalog-product-list-tile catalog-product-list-slideshow catalog-product-list-list">
+            <ul class="catalog-product-list catalog-product-list-tile">
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
                   <h3 class="catalog-product-title">Amara Resort &&nbsp;Spa</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_01.jpg" width="300" height="212"
-                    alt="Каньон с видом на ночное звёздное небо">
+                    alt="Каньон с видом на ночное звёздное небо.">
                 </a>
 
-                <!-- <div class="catalog-product-description"> -->
                 <span class="catalog-product-type">Гостиница</span>
-                <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
-                <!-- </div> -->
 
-                <!-- <div class="catalog-product-buttons"> -->
+                <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
+
                 <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
-                <!-- </div> -->
-
-                <!-- <div class="catalog-product-raiting"> -->
 
                 <p class="catalog-product-stars catalog-product-stars-4"><span class="visually-hidden">Звёзд:</span>
-                  <span class="visually-hidden catalog-product-stars-sum">4</span>
+                  <span class="visually-hidden catalog-product-stars-sum">4.</span>
                 </p>
-                <!--
-                <h4 class="visually-hidden">Звёзд:</h4>
-
-                <ul class="catalog-product-star-list">
-                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
-                </ul> -->
 
                 <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">8,5</span>
                 </p>
-                <!-- </div> -->
+
               </li>
 
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
                   <h3 class="catalog-product-title">Villas at&nbsp;Poco&nbsp;Diablo</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_02.jpg" width="300" height="212"
-                    alt="Скалы с большим количеством деревьев вокруг и радугой">
+                    alt="Скалы с большим количеством деревьев вокруг и радугой.">
                 </a>
 
-                <!-- <div class="catalog-product-description"> -->
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">5000</span> ₽</p>
-                <!-- </div> -->
 
-                <!-- <div class="catalog-product-buttons"> -->
                 <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add catalog-product-button-active"
                   type="button">В
                   избранном</button>
-                <!-- </div> -->
-
-                <!-- <div class="catalog-product-raiting"> -->
 
                 <p class="catalog-product-stars catalog-product-stars-4"><span class="visually-hidden">Звёзд:</span>
-                  <span class="visually-hidden catalog-product-stars-sum">4</span>
+                  <span class="visually-hidden catalog-product-stars-sum">4.</span>
                 </p>
-
-                <!-- <h4 class="visually-hidden">Звёзд:</h4>
-                <ul class="catalog-product-star-list">
-                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">4</span></li>
-                </ul> -->
 
                 <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">9,2</span>
                 </p>
-                <!-- </div> -->
+
               </li>
 
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
                   <h3 class="catalog-product-title">Desert Quail Inn</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_03.jpg" width="300" height="212"
-                    alt="Красные скалы с большим количеством зелени вокруг">
+                    alt="Красные скалы с большим количеством зелени вокруг.">
                 </a>
 
-                <!-- <div class="catalog-product-description"> -->
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">2500</span> ₽</p>
-                <!-- </div> -->
 
-                <!-- <div class="catalog-product-buttons"> -->
                 <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
-                <!-- </div> -->
-
-                <!-- <div class="catalog-product-raiting"> -->
 
                 <p class="catalog-product-stars catalog-product-stars-3"><span class="visually-hidden">Звёзд:</span>
-                  <span class="visually-hidden catalog-product-stars-sum">3</span>
+                  <span class="visually-hidden catalog-product-stars-sum">3.</span>
                 </p>
-                <!-- <h4 class="visually-hidden">Звёзд:</h4>
-                <ul class="catalog-product-star-list">
-                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">3</span></li>
-                </ul> -->
 
                 <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">6,9</span>
                 </p>
-                <!-- </div> -->
+
               </li>
 
               <li class="catalog-product-card">
                 <a class="catalog-product-link" href="product.html">
                   <h3 class="catalog-product-title">GreenTree Inn</h3>
                   <img class="catalog-product-img" src="images/catalog/hotel_04.jpg" width="300" height="212"
-                    alt="Красные скалы с видом на звёздное небо">
+                    alt="Красные скалы с видом на звёздное небо.">
                 </a>
 
-                <!-- <div class="catalog-product-description"> -->
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">1500</span> ₽</p>
-                <!-- </div> -->
 
-                <!-- <div class="catalog-product-buttons"> -->
                 <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
-                <!-- </div> -->
-
-                <!-- <div class="catalog-product-raiting"> -->
 
                 <p class="catalog-product-stars catalog-product-stars-2"><span class="visually-hidden">Звёзд:</span>
-                  <span class="visually-hidden catalog-product-stars-sum">2</span>
+                  <span class="visually-hidden catalog-product-stars-sum">2.</span>
                 </p>
-
-
-                <!-- <h4 class="visually-hidden">Звёзд:</h4>
-                <ul class="catalog-product-star-list">
-                  <li class="catalog-product-star-item"><span class="visually-hidden">1</span></li>
-                  <li class="catalog-product-star-item"><span class="visually-hidden">2</span></li>
-                </ul> -->
 
                 <p class="catalog-product-raiting-text">Рейтинг: <span class="catalog-producr-raiting-number">5,0</span>
                 </p>
-                <!-- </div> -->
+
               </li>
             </ul>
           </div>
@@ -414,7 +381,7 @@
           <p class="subscribe-text">Только полезная информация и&nbsp;никакого спама, <br>честное бойскаутское!</p>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="subscribe-email">Email</label>
+            <label class="visually-hidden" for="subscribe-email">Email.</label>
             <input class="subscribe-email" placeholder="Ваш e-mail" type="email" name="subscribe-email"
               id="subscribe-email" required>
 
@@ -425,12 +392,12 @@
 
       <footer class="page-footer">
         <section class="footer-social">
-          <h2 class="visually-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Социальные сети.</h2>
 
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">В Контакте</span>
+                <span class="visually-hidden">В Контакте.</span>
                 <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="25" height="15"
                   viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -442,7 +409,7 @@
 
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://t.me/htmlacademy ">
-                <span class="visually-hidden">Telegram</span>
+                <span class="visually-hidden">Telegram.</span>
                 <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="18" height="16"
                   viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -454,7 +421,7 @@
 
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">YouTube</span>
+                <span class="visually-hidden">YouTube.</span>
                 <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="23" height="18"
                   viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -467,14 +434,14 @@
         </section>
 
         <section class="footer-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты.</h2>
           <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
 
         <section class="footer-copyright">
-          <h2 class="visually-hidden">Копирайт</h2>
+          <h2 class="visually-hidden">Копирайт.</h2>
           <a class="footer-copyright-link" href="https://htmlacademy.ru/">
-            <span class="visually-hidden">HTML Academy</span>
+            <span class="visually-hidden">HTML Academy.</span>
             <svg class="footer-copyright-img" aria-hidden="true" focusable="false" width="115" height="34"
               viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#a)" fill="#000">
@@ -490,6 +457,127 @@
           </a>
         </section>
       </footer>
+
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <button class="modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть.</span>
+            <svg class="modal-close-img" aria-hidden="true" focusable="false" width="21" height="20" viewBox="0 0 21 20"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.4 4.3 16.1 3l-5.7 5.7L4.68 3l-1.3 1.3L9.1 10l-5.7 5.7L4.68 17l5.7-5.7L16.1 17l1.3-1.3-5.71-5.7 5.7-5.7Z"
+                fill="#000" />
+            </svg>
+          </button>
+
+          <section class="modal-content">
+            <h2 class="title modal-title">Поиск гостиницы в Седоне</h2>
+
+            <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <p class="modal-search-form-text">
+                <label class="modal-search-form-description" for="modal-search-form-arrival-date">Дата заезда:</label>
+                <input class="modal-search-form-date" placeholder="27 апреля 2020" type="text"
+                  id="modal-search-form-arrival-date" name="arrival-date">
+
+                <button class="modal-search-form-calendar" type="button">
+                  <span class="visually-hidden">Выбрать дату заезда.</span>
+                  <svg class="modal-search-img" aria-hidden="true" focusable="false" width="21" height="20"
+                    viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.14 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000" />
+                    <path
+                      d="M17.4 4h-2V2h-1v2h-8V2h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12h-14V9h14v7Zm-14-8V5h2v2h1V5h8v2h1V5h2v3h-14Z"
+                      fill="#000" />
+                    <path
+                      d="M10.4 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.64 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM8.14 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.9 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.9 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.4 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.64 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.9 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.9 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"
+                      fill="#000" />
+                  </svg>
+                </button>
+
+                <span class="modal-search-form-message modal-search-form-message-error">Мы не можем отправить вас
+                  в&nbsp;прошлое.</span>
+              </p>
+
+              <p class="modal-search-form-text">
+                <label class="modal-search-form-description" for="modal-search-form-date-of-departure">Дата
+                  выезда:</label>
+                <input class="modal-search-form-date" placeholder="1 сентября 2021" type="text"
+                  id="modal-search-form-date-of-departure" name="date-of-departure">
+
+                <button class="modal-search-form-calendar" type="button">
+                  <span class="visually-hidden">Выбрать дату выезда.</span>
+                  <svg class="modal-search-img" aria-hidden="true" focusable="false" width="21" height="20"
+                    viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.14 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" fill="#000" />
+                    <path
+                      d="M17.4 4h-2V2h-1v2h-8V2h-1v2h-2c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12h-14V9h14v7Zm-14-8V5h2v2h1V5h8v2h1V5h2v3h-14Z"
+                      fill="#000" />
+                    <path
+                      d="M10.4 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.64 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM8.14 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.9 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.9 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.4 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.64 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.9 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.9 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"
+                      fill="#000" />
+                  </svg>
+                </button>
+
+                <span class="modal-search-form-message">На эти даты есть свободные
+                  номера. Пока&nbsp;есть.</span>
+              </p>
+
+              <div class="modal-search-form-visitors-wrapper">
+                <div class="modal-search-form-visitors">
+                  <label class="modal-search-form-description"
+                    for="modal-search-form-number-of-adults">Взрослые:</label>
+
+                  <div class="modal-search-form-number-wrapper">
+                    <button class="modal-search-form-number-button modal-search-form-button-add" type="button">
+                      <span class="visually-hidden">Увеличить количество взрослых на 1 единицу.</span>
+                      <svg class="modal-search-form-number-img" aria-hidden="true" focusable="false" width="21"
+                        height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
+                      </svg>
+                    </button>
+                    <input class="modal-search-form-number" placeholder="2" type="text"
+                      id="modal-search-form-number-of-adults" name="number-of-adults">
+
+                    <button class="modal-search-form-number-button modal-search-form-button-remove" type="button">
+                      <span class="visually-hidden">Уменьшить количество взрослых на 1 единицу.</span>
+                      <svg class="modal-search-form-number-img" aria-hidden="true" focusable="false" width="21"
+                        height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="modal-search-form-visitors modal-search-form-visitors-childrens">
+                  <label class="modal-search-form-description" for="modal-search-form-number-of-childrens">Дети:</label>
+
+                  <div class="modal-search-form-number-wrapper">
+                    <button class="modal-search-form-number-button modal-search-form-button-add" type="button">
+                      <span class="visually-hidden">Увеличить количество детей на 1 единицу.</span>
+                      <svg class="modal-search-form-number-img" aria-hidden="true" focusable="false" width="21"
+                        height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
+                      </svg>
+                    </button>
+                    <input class="modal-search-form-number" placeholder="2" type="text"
+                      id="modal-search-form-number-of-childrens" name="number-of-childrens">
+
+                    <button class="modal-search-form-number-button modal-search-form-button-remove" type="button">
+                      <span class="visually-hidden">Уменьшить количество детей на 1 единицу.</span>
+                      <svg class="modal-search-form-number-img" aria-hidden="true" focusable="false" width="21"
+                        height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button class="button modal-form-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 

@@ -1,21 +1,26 @@
 :root {
   --extra-light: #ffffff;
+  --extra-light-08: rgba(255, 255, 255, 0.8);
+  --extra-light-03: rgba(255, 255, 255, 0.3);
   --basic-light: #f2f2f2;
   --second-light: #e5e5e5;
-  --medium-light: rgba(255, 255, 255, 0.3);
+  --modal-second-light: #e6e6e6;
 
   --extra-dark: #000000;
+  --extra-dark-03: rgba(0, 0, 0, 0.3);
+  --extra-dark-015: rgba(0, 0, 0, 0.15);
   --basic-dark: #333333;
   --second-dark: #3f5e72;
-  --medium-dark: rgba(0, 0, 0, 0.3);
 
   --main-accent: #82b3d3;
-  --main-accent-light: rgba(131, 179, 211, 0.12);
-  --main-accent-dark: rgba(131, 179, 211, 0.2);
+  --main-accent-02: rgba(131, 179, 211, 0.2);
+  --main-accent-012: rgba(131, 179, 211, 0.12);
+
   --medium-accent: #68a2ca;
   --extra-accent: #ff5757;
   --basic-accent: #7db54f;
   --basic-accent-dark: #6c9e42;
   --second-accent: #756157;
+  --second-accent-03: rgba(117, 97, 87, 0.3);
   --second-accent-dark: #615048;
 }
