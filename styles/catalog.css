@@ -57,27 +57,35 @@
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
+  outline: none;
   color: var(--extra-light);
+
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .breadcrumbs-link:hover,
 .breadcrumbs-link:focus {
-  text-decoration: underline;
-  outline: none;
+  opacity: 0.6;
 }
 
 .breadcrumbs-link:active {
-  text-decoration: none;
+  opacity: 1;
 }
 
 .breadcrumbs-link-active:hover {
-  text-decoration: none;
+  opacity: 1;
 }
 
 .breadcrumbs-link-home {
   margin-left: -5px;
 
-  transition-property: transform;
+  border-radius: 8px;
+  outline: solid 1px transparent;
+  outline-offset: -5px;
+
+  transition-property: transform, outline-color, opacity;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
 }
@@ -89,8 +97,6 @@
 
 .breadcrumbs-link-home:focus {
   outline: solid 1px var(--extra-light);
-  outline-offset: -5px;
-  border-radius: 4px;
 }
 
 .breadcrumbs-link-home:active {
@@ -183,7 +189,7 @@
 
 .catalog-control-input:focus + .catalog-control-mark,
 .catalog-control-input:focus + .catalog-control-radio {
-  outline: 3px solid var(--main-accent);
+  outline-color: var(--main-accent);
 }
 
 .catalog-control-input:active {
@@ -198,7 +204,13 @@
   height: 20px;
 
   border-radius: 4px;
+  outline: 3px solid transparent;
+
   background-color: var(--extra-light);
+
+  transition-property: outline-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .catalog-control-input[type="checkbox"]:checked + .catalog-control-mark {
@@ -215,7 +227,13 @@
   height: 20px;
 
   border-radius: 50%;
+  outline: 3px solid transparent;
+
   background-color: var(--extra-light);
+
+  transition-property: outline-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .catalog-control-input[type="radio"]:checked + .catalog-control-radio {
@@ -254,15 +272,17 @@
   font-size: 18px;
   line-height: 24px;
 
+  color: var(--extra-dark);
+
   border-radius: 4px;
   border: none;
+  outline: 3px solid transparent;
 
-  color: var(--extra-dark);
   background-color: var(--basic-light);
 
-  transition-property: background-color;
+  transition-property: background-color, outline-color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: 0.2s, 0.3s;
 }
 
 .catalog-filter-price-input::-webkit-outer-spin-button,
@@ -282,7 +302,7 @@
 
 .catalog-filter-price-input:focus {
   background-color: var(--second-light);
-  outline: 3px solid var(--main-accent);
+  outline-color: var(--main-accent);
 }
 
 .catalog-filter-price-input:active {
@@ -325,16 +345,20 @@
 
   border-radius: 5px;
   border: none;
-  outline: none;
+  outline: 3px solid transparent;
 
   cursor: pointer;
 
   background-color: var(--extra-light);
+
+  transition-property: outline-color, outline-width;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .catalog-filter-range-toogle:hover,
 .catalog-filter-range-toogle:focus {
-  outline: 3px solid var(--main-accent);
+  outline-color: var(--main-accent);
 }
 
 .catalog-filter-range-toogle:active {
@@ -360,11 +384,11 @@
   font-size: 16px;
   line-height: 20px;
 
-  outline: none;
+  outline: solid 3px transparent;
 
   color: var(--extra-light);
 
-  transition-property: background-color, color, opacity;
+  transition-property: background-color, color, opacity, outline-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
 }
@@ -392,16 +416,16 @@
 
 .catalog-button-reset:hover {
   opacity: 0.6;
-  outline: none;
+  outline-color: transparent;
 }
 
 .catalog-button-reset:focus {
-  outline: solid 3px var(--main-accent);
+  outline-color: var(--main-accent);
 }
 
 .catalog-button-reset:active {
   opacity: 0.3;
-  outline: none;
+  outline-color: transparent;
 }
 
 .catalog-button-reset:disabled {
@@ -836,7 +860,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
+  width: 60px;
   height: 60px;
 
   font-style: normal;

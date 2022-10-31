@@ -318,9 +318,10 @@
 
   background-color: var(--basic-light);
   border-radius: 4px 0 0 4px;
-  outline: none;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
 
-  transition-property: background-color;
+  transition-property: background-color, outline-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
 }
@@ -331,8 +332,7 @@
 
 .subscribe-email:focus {
   background-color: var(--second-light);
-  outline: 3px solid var(--main-accent);
-  outline-offset: -3px;
+  outline-color: var(--main-accent);
 }
 
 .subscribe-button {
