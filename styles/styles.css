@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsans-400.woff2") format(woff2);
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/ptsans-700.woff2") format(woff2);
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,13 +27,14 @@
   --extra-dark: #000000;
   --extra-dark-06: rgba(0, 0, 0, 0.6);
   --extra-dark-03: rgba(0, 0, 0, 0.3);
+  --extra-dark-02: rgba(0, 0, 0, 0.2);
   --extra-dark-015: rgba(0, 0, 0, 0.15);
   --basic-dark: #333333;
   --second-dark: #3f5e72;
 
   --main-accent: #82b3d3;
   --main-accent-02: rgba(131, 179, 211, 0.2);
-  --main-accent-012: rgba(131, 179, 211, 0.12);
+  --main-accent-12: rgba(131, 179, 211, 0.12);
 
   --medium-accent: #68a2ca;
   --extra-accent: #ff5757;
@@ -98,7 +99,7 @@ img {
   flex-direction: column;
 
   background-color: var(--extra-light);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px var(--extra-dark-02);
 }
 
 .main-container {
@@ -115,6 +116,7 @@ img {
 }
 
 .button {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -374,6 +376,7 @@ img {
 .advantages-text {
   margin: 0;
   margin-bottom: 20px;
+  color: var(--basic-dark);
 }
 
 .advantages-list {
@@ -396,11 +399,11 @@ img {
   width: 400px;
   min-height: 384px;
 
-  background-color: var(--main-accent-02);
+  background-color: var(--main-accent-12);
 }
 
 .advantages-item:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: var(--main-accent-02);
 }
 
 .advantages-wrapper-item {
@@ -467,6 +470,8 @@ img {
 .advantages-description {
   margin: 0;
   margin-bottom: 20px;
+
+  color: var(--basic-dark);
 }
 
 .advantages-img {
@@ -541,6 +546,8 @@ img {
 .search-text {
   margin: 0;
   margin-bottom: 20px;
+
+  color: var(--basic-dark);
 }
 
 .search-text:last-child {
@@ -776,7 +783,7 @@ img {
 }
 
 .breadcrumbs-link-home {
-  margin-left: -8px;
+  margin-left: -7px;
 
   border-radius: 8px;
   outline: solid 1px transparent;
@@ -819,6 +826,8 @@ img {
   width: 420px;
   display: flex;
   flex-wrap: wrap;
+
+  text-transform: capitalize;
 }
 
 .catalog-filter-control-column {
@@ -968,6 +977,7 @@ img {
   width: 100%;
   padding: 12px 60px 12px 20px;
 
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1160,7 +1170,7 @@ img {
 }
 
 .catalog-sort-result {
-  max-width: 458px;
+  max-width: 452px;
   padding: 10px 0;
   margin: 0;
   margin-right: 40px;
@@ -1176,6 +1186,7 @@ img {
   padding: 12px 20px;
   padding-right: 20px;
 
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
 
@@ -1281,7 +1292,7 @@ img {
 
 .catalog-product-list {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
   padding: 0;
   display: grid;
   gap: 20px;
@@ -1304,6 +1315,7 @@ img {
 
   font-size: 18px;
   line-height: 21px;
+  color: var(--basic-dark);
 
   background-color: var(--extra-light);
   border: 1px solid var(--modal-second-light);
@@ -1341,12 +1353,17 @@ img {
 .catalog-product-title {
   margin: 0;
 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
   order: 1;
 }
 
 .catalog-product-img {
   height: 211px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   object-fit: contain;
 
   color: var(--extra-light);
