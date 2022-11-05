@@ -4,17 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon/favicon_32x32.png">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/colors.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/catalog.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -87,12 +79,6 @@
                     <path d="M8.4 13h1v-2.5h2V13h1V9.5h-4V13Z" fill="#ffffff" />
                   </svg>
                   <span class="visually-hidden">Главная.</span>
-                </a>
-              </li>
-
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="#">
-                  Временная ссылка для проверки стилей взаимодействия
                 </a>
               </li>
 
@@ -179,13 +165,13 @@
                     <div class="catalog-filter-price-control catalog-filter-price-min">
                       <label class="catalog-filter-price-label" for="catalog-filter-price-min-number">от</label> <input
                         class="catalog-filter-price-input catalog-filter-price-min-number"
-                        id="catalog-filter-price-min-number" type="number" name="min-price" placeholder="0">
+                        id="catalog-filter-price-min-number" type="number" name="min-price" min="0" placeholder="0">
                     </div>
 
                     <div class="catalog-filter-price-control catalog-filter-price-max">
                       <label class="catalog-filter-price-label" for="catalog-filter-price-number">до</label> <input
                         class="catalog-filter-price-input catalog-filter-price-max-number"
-                        id="catalog-filter-price-number" type="number" name="max-price" placeholder="9000">
+                        id="catalog-filter-price-number" type="number" name="max-price" min="0" placeholder="9000">
                     </div>
                   </div>
 
@@ -194,11 +180,11 @@
                     <div class="catalog-filter-range-scale">
                       <div class="catalog-filter-range-bar" style="left: 0; width: 226px;">
                         <button class="catalog-filter-range-toogle catalog-filter-range-toogle-min" type="button">
-                          <span class="visually-hidden">Указать минмальную стоимость</span>
+                          <span class="visually-hidden">Указать минмальную стоимость.</span>
                         </button>
 
                         <button class="catalog-filter-range-toogle catalog-filter-range-toogle-max" type="button">
-                          <span class="visually-hidden">Указать маскимальную стоимость</span>
+                          <span class="visually-hidden">Указать маскимальную стоимость.</span>
                         </button>
                       </div>
                     </div>
@@ -261,7 +247,7 @@
 
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">4000</span> ₽</p>
 
-                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <a class="button catalog-product-button catalog-product-info" href="#">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
 
@@ -284,7 +270,7 @@
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">5000</span> ₽</p>
 
-                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <a class="button catalog-product-button catalog-product-info" href="#">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add catalog-product-button-active"
                   type="button">В
                   избранном</button>
@@ -308,7 +294,7 @@
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">2500</span> ₽</p>
 
-                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <a class="button catalog-product-button catalog-product-info" href="#">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
 
@@ -331,7 +317,7 @@
                 <span class="catalog-product-type">Гостиница</span>
                 <p class="catalog-product-price">От <span class="catalog-product-price-number">1500</span> ₽</p>
 
-                <a class="button catalog-product-button catalog-product-info" href="#product">Подробнее</a>
+                <a class="button catalog-product-button catalog-product-info" href="#">Подробнее</a>
                 <button class="button catalog-product-button catalog-product-button-add" type="button">В
                   избранное</button>
 
@@ -534,7 +520,7 @@
                       <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
                     </svg>
                   </button>
-                  <input class="modal-search-form-number" placeholder="2" type="text"
+                  <input class="modal-search-form-number" placeholder="2" type="number" min="0"
                     id="modal-search-form-number-of-adults" name="number-of-adults">
 
                   <button class="modal-search-form-number-button modal-search-form-button-remove" type="button">
@@ -552,7 +538,7 @@
                   <label class="modal-search-form-description" for="modal-search-form-number-of-childrens">Дети:</label>
                   <span class="tooltip">
                     <button class="tooltip-button" type="button" aria-labelledby="tooltip-text">
-                      <span class="visually-hidden">Открыть подсказку</span>
+                      <span class="visually-hidden">Открыть подсказку.</span>
                       <svg class="tooltip-button-img" aria-hidden="true" focusable="false" width="21" height="20"
                         viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.4 4h2v2h-2V4Zm2 12h-2V7h2v9Z" fill="#fff" />
@@ -573,7 +559,7 @@
                       <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
                     </svg>
                   </button>
-                  <input class="modal-search-form-number" placeholder="2" type="text"
+                  <input class="modal-search-form-number" placeholder="2" type="number" min="0"
                     id="modal-search-form-number-of-childrens" name="number-of-childrens">
 
                   <button class="modal-search-form-number-button modal-search-form-button-remove" type="button">
